@@ -1,37 +1,36 @@
-// Upload files in static/ So any file static/file.pdf -> /file.pdf is accessible at root
+// Carregar arquivos em static/ Portanto, qualquer arquivo static/file.pdf -> /file.pdf é acessível na raiz
 
 export default {
-  name: 'gyan prakash karn',
-  domain: 'template.karngyan.com', // add without https:// , used in meta tags and share urls
-  image: '/images/bigheadkarngyan.png',
-  email: 'mail@karngyan.com',
+  name: 'DisCloud API Status',
+  domain: 'nick.discloud.app', // Não colocar: https://
+  image: '/images/discloud-logo.png',
+  email: 'support@discloudbot.com',
   googleAnalyticsV4: {
     enabled: false,
     id: ''
   },
   plausibleAnalytics: {
     enabled: true,
-    domain: 'template.karngyan.com',
+    domain: 'nick.discloud.app',
     trackLocalhost: false,
     // leave it empty if plausible is not self hosted
-    apiHost: 'https://analytics.lookatx.dev' // default: https://plausible.io
+    apiHost: '' // default: https://plausible.io
   },
-  // enable if you want comments and likes on posts
-  // see how it looks on karngyan.com
+  // Habilite se quiser comentários e curtidas nas postagens
   firebase: {
-    enabled: true
+    enabled: false
   },
   social: {
-    github: 'karngyan',
-    linkedin: 'karngyan',
-    facebook: 'karnsometimes',
-    twitter: 'gyankarn',
-    instagram: 'karngyan.dev',
-    codestats: 'karngyan' // https://codestats.net make a profile if you dont already have one.
+    github: 'discloud',
+    linkedin: 'discloud',
+    facebook: 'discloudbot',
+    twitter: 'discloudbot',
+    instagram: 'discloudbot',
+    codestats: '' // https://codestats.net
   },
   buyMeACoffee: {
     enabled: true,
-    url: 'https://www.buymeacoffee.com/karngyan'
+    url: 'https://discloud.app'
   },
   projects: {
     enabled: true,
@@ -40,28 +39,28 @@ export default {
     enabled: true,
   },
   resume: {
-    enabled: true,
-    pdfUrl: '/RESUME_GYAN_KARN_DARK.pdf' // add files in static folder
+    enabled: false,
+    pdfUrl: '/' // Adicione o sobre nós na raíz da pasta static
   },
   uses: {
-    enabled: true,
+    enabled: false,
     meta: [
-      {title: 'OS', value: 'macOS Catalina'},
-      {title: 'Memory', value: '16 GB 2667 MHz DDR4'},
-      {title: 'Keyboard', value: 'Keychron K2 - Gateron Brown Keys'},
-      {title: 'Mouse', value: 'Logitech Silent Pebble'},
-      {title: 'Monitor', value: 'LG QHD (2560 x 1440) 27 Inch IPS Display'},
-      {title: 'Laptop • Processor • Graphics', value: 'MacBook Pro (16-inch, 2019) • 2.6 GHz 6-Core Intel Core i7 • AMD Radeon Pro 5300M 4 GB + Intel UHD Graphics 630 1536 MB'}
+      {title: 'Sistema Operacional', value: 'Linux Unbuntu'},
+      {title: 'RAM', value: '128 GB 3600 MHz DDR4'},
+      {title: 'Processador', value: 'Ryzen 7 3700x 8/16'},
+      {title: 'Armazenamento', value: 'SSD Nvme. 2TB'},
+      {title: 'Linguagem', value: 'JavaScript, TypeScript'},
+      {title: 'Hospedagem', value: 'Sites, Bots & Banco de Dados'}
     ]
   },
   workedAt: {
-    // add logos in static and at max add 3/4
+    // Adicione logos estáticas no máximo 3/4
     enabled: true,
     meta: [
-      { name: 'SendPost', src: '/images/sendpost.png', url: 'https://sendpost.io' },
-      { name: 'Amazon', src: '/images/amazon.png', url: 'https://amazon.in' },
-      { name: 'InterviewReady', src: '/images/interviewready-io.png', url: 'https://get.interviewready.io' },
-      { name: 'CrioDo', src: '/images/crio.png', url: 'https://crio.do' },
+      { name: 'Java', src: '/images/java.png', url: 'https://sendpost.io' },
+      { name: 'Ruby', src: '/images/ruby.png', url: 'https://amazon.in' },
+      { name: 'Rust', src: '/images/rust.png', url: 'https://get.interviewready.io' },
+      { name: 'PHP', src: '/images/php.png', url: 'https://crio.do' },
     ]
   },
   recommendations: {
@@ -72,7 +71,7 @@ export default {
     ]
   },
   loadingIndicator: {
-    name: 'pulse'
+    name: 'cube-grid'
     // https://tobiasahlin.com/spinkit/
     // circle
     // cube-grid
@@ -90,28 +89,28 @@ export default {
     enabled: true,
   },
   strings: {
-    en_US: {
+    pt_BR: {
       download: 'download',
       nav: {
-        home: 'home',
-        blog: 'blog',
-        projects: 'projects',
-        uses: 'uses',
-        resume: 'résumé',
-        buyMeACoffee: 'buy me a beer',
-        signIn: 'sign in',
-        signOut: 'sign out'
+        home: 'Início',
+        blog: 'Blog',
+        projects: 'Projetos',
+        system: 'Sistema',
+        about: 'Sobre Nós',
+        buyMeACoffee: 'Seja Doador',
+        signIn: 'Login',
+        signOut: 'Sair'
       },
       hero: {
-        iBlogTech: 'i blog tech',
-        haveALook: 'have a look',
-        friendlyNeighborhood: 'your friendly neighborhood',
-        description: 'i am a software engineer and a part time freelancer. i blog tech, write a weekend newsletter called software shots, and tinker with side projects every now n then.',
-        words: ['developer', 'designer', 'engineer', 'programmer', 'encoder'],
+        about: 'Sobre Nós',
+        content: 'Conteúdos',
+        friendlyNeighborhood: 'DISCLOUD ─ API',
+        description: 'Um serviço feito para hospedar todos os seus aplicativos com certificados TLS gratuitos, CDN global, proteção contra DDoS e implantações automáticas com Git.',
+        words: ['Commit Archives', 'Status', 'Restart', 'TOR Checker', 'Domain Checker', 'Whois Checker', 'Email Validator'],
       },
-      githubCalendar: {
-        header: 'contributions',
-        subtext: 'github calendar heatmap'
+      api: {
+        header: 'API Requests',
+        subtext: 'Lista de APIs disponíveis'
       },
       blog: {
         header: 'blog',
@@ -126,8 +125,8 @@ export default {
         subtext: 'a quick summary of what I use on a daily basis to code and some codestats.net flex'
       },
       projects: {
-        header: 'projects',
-        subtext: 'this page lists some of my personal and work projects. every project has some story, click on the title to read'
+        header: 'DisCloud - API',
+        subtext: 'Gerencie Dados, Processos, Sistemas e integre com todas as suas Aplicações.'
       },
       recommendations: {
         header: 'recommendations',

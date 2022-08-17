@@ -1,4 +1,4 @@
-import config from './karngyan.config'
+import config from './discloud.config'
 
 const createSitemapRoutes = async () => {
   let routes = [];
@@ -35,8 +35,8 @@ const create = async (feed) => {
   const hostname = `https://${config.domain}`;
   feed.options = {
     title: `Blog | ${config.name}`,
-    description: config.strings.en_US.hero.description,
-    link: `${hostname}/feed.xml`
+    description: config.strings.pt_BR.hero.description,
+    link: `${hostname}/feed.md`
   }
   const { $content } = require('@nuxt/content')
   const posts = await $content('posts').fetch();
@@ -59,26 +59,26 @@ const nuxtConfig = {
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: `home -- ${config.name}`,
+    title: `Início | ${config.name}`,
     htmlAttrs: {
       lang: 'en'
     },
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: config.strings.en_US.hero.description },
+      { hid: 'description', name: 'description', content: config.strings.pt_BR.hero.description },
       { name: 'title', content: `${config.name} | friendly neighborhood developer` },
       { name: 'author', content: config.name },
       { property: 'og:type', content: 'website'},
       { property: 'og:url', content: config.social },
       { property: 'og:title', content: `${config.name} | friendly neighborhood developer` },
-      { property: 'og:description', content: config.strings.en_US.hero.description },
+      { property: 'og:description', content: config.strings.pt_BR.hero.description },
       { property: 'og:image', content: `${config.image}` },
 
       { property: 'twitter:card', content: `${config.image}` },
       { property: 'twitter:url', content: `${config.domain}`},
       { property: 'twitter:title', content: `${config.name} | friendly neighborhood developer` },
-      { property: 'twitter:description', content: config.strings.en_US.hero.description },
+      { property: 'twitter:description', content: config.strings.pt_BR.hero.description },
       { property: 'twitter:image', content: `${config.image}` },
     ],
     link: [
@@ -134,12 +134,12 @@ const nuxtConfig = {
     meta: {
       name: config.domain,
       author: config.name,
-      description: config.strings.en_US.hero.description,
+      description: config.strings.pt_BR.hero.description,
     },
     manifest: {
       name: config.domain,
       short_name: config.name.split(' ')[0],
-      description: config.strings.en_US.hero.description,
+      description: config.strings.pt_BR.hero.description,
     }
   },
 
@@ -160,11 +160,11 @@ const nuxtConfig = {
     lazy: true,
     langDir: 'lang/',
     locales: [
-      {code: 'en', name: 'English', file: 'en_US.js'}
+      {code: 'pt', name: 'Portugues', file: 'pt_BR.js'}
     ],
-    defaultLocale: 'en',
+    defaultLocale: 'pt',
     vueI18n: {
-      fallbackLocale: 'en',
+      fallbackLocale: 'pt',
     },
     detectBrowserLanguage: {
       useCookie: true,
@@ -269,7 +269,7 @@ if (config.blog.enabled) {
   nuxtConfig.modules.unshift('@nuxtjs/feed')
   nuxtConfig.feed = [
     {
-      path: '/feed.xml', // The route to your feed.
+      path: '/feed.md', // The route to your feed.
       create, // The create function (see below)
       cacheTime: 1000 * 60 * 15, // How long should the feed be cached
       type: 'rss2', // Can be: rss2, atom1, json1
