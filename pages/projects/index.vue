@@ -30,7 +30,7 @@ const ALL = 'all'
 export default {
   head() {
     return {
-      title: `projects -- ${this.$config.name}`
+      title: `Projetos | ${this.$config.name}`
     }
   },
   computed: {

@@ -1,6 +1,6 @@
 <template>
 <div class="font-extrabold hover:text-hot-pink text-3xl animation-logo tracking-tighter text-indigo-700">
-  {{ $config.name[0].toLowerCase() }}
+  <img alt="DisCloud Logo" src="https://discloudbot.com/_next/image?url=%2F_next%2Fstatic%2Fimage%2Fpublic%2Fimg%2Flogo-discloud.4a018b1d4811cbe43783b95ca3508f6a.svg&w=256&q=75">
 </div>
 </template>
 

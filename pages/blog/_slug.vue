@@ -27,7 +27,7 @@
                 </div>
 
                 <dl class="">
-                  <div><dt class="sr-only">Published on</dt>
+                  <div><dt class="sr-only">Publique este Post em</dt>
                     <dd class="text-xs font-medium text-gray-500">
                       <a target="_blank" rel="noreferrer" :href="`https://twitter.com/${post.author.twitter}`"><span class="text-indigo-600 hover:text-indigo-300">{{ post.author.name }}</span></a>
                       <time :datetime="post.createdAt">{{' on ' + new Date(post.createdAt).toLocaleDateString('en-US', {year: 'numeric', month: 'short', day: 'numeric'}) }}</time>
@@ -107,7 +107,7 @@ export default {
   },
   head() {
     return {
-      title: this.post.title + ` -- blog -- ${this.$config.name}`,
+      title: this.post.title + ` Blog | ${this.$config.name}`,
       meta: [
         { hid: 'description', name: 'description', content: this.post.description },
         // Open Graph
