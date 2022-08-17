@@ -36,7 +36,7 @@ const create = async (feed) => {
   feed.options = {
     title: `Blog | ${config.name}`,
     description: config.strings.pt_BR.hero.description,
-    link: `${hostname}/feed.md`
+    link: `${hostname}/feed.xml`
   }
   const { $content } = require('@nuxt/content')
   const posts = await $content('posts').fetch();
@@ -67,22 +67,22 @@ const nuxtConfig = {
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       { hid: 'description', name: 'description', content: config.strings.pt_BR.hero.description },
-      { name: 'title', content: `${config.name} | friendly neighborhood developer` },
+      { name: 'title', content: `${config.name} | DisCloud.app` },
       { name: 'author', content: config.name },
       { property: 'og:type', content: 'website'},
       { property: 'og:url', content: config.social },
-      { property: 'og:title', content: `${config.name} | friendly neighborhood developer` },
+      { property: 'og:title', content: `${config.name} | DisCloud.app` },
       { property: 'og:description', content: config.strings.pt_BR.hero.description },
       { property: 'og:image', content: `${config.image}` },
 
       { property: 'twitter:card', content: `${config.image}` },
       { property: 'twitter:url', content: `${config.domain}`},
-      { property: 'twitter:title', content: `${config.name} | friendly neighborhood developer` },
+      { property: 'twitter:title', content: `${config.name} | DisCloud.app` },
       { property: 'twitter:description', content: config.strings.pt_BR.hero.description },
       { property: 'twitter:image', content: `${config.image}` },
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.png' },
       { rel: 'stylesheet', href: 'https://rsms.me/inter/inter.css'}
     ],
   },
@@ -129,7 +129,7 @@ const nuxtConfig = {
 
   pwa: {
     icon: {
-      fileName: 'favicon.ico'
+      fileName: 'favicon.png'
     },
     meta: {
       name: config.domain,
@@ -269,14 +269,13 @@ if (config.blog.enabled) {
   nuxtConfig.modules.unshift('@nuxtjs/feed')
   nuxtConfig.feed = [
     {
-      path: '/feed.md', // The route to your feed.
-      create, // The create function (see below)
-      cacheTime: 1000 * 60 * 15, // How long should the feed be cached
-      type: 'rss2', // Can be: rss2, atom1, json1
-      data: [] // Will be passed as 2nd argument to `create` function
+      path: '/feed.xml', // O caminho para o seu feed.
+      create, // A função de criação (veja abaixo)
+      cacheTime: 1000 * 60 * 15, // Por quanto tempo o feed deve ser armazenado em cache
+      type: 'rss2', // Pode ser: rss2, atom1, json1
+      data: [] // Será passado como 2º argumento para a função `create`
     }
   ]
-
 
 }
 

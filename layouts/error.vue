@@ -3,7 +3,7 @@
   <div class="flex flex-col items-center justify-center">
     <div data-aos="fade-up" class="text-center">
       <h2 class="text-2xl tracking-tight font-extrabold text-gray-200">
-        ERRO 404 Página não Encontrada
+          ERROR 404
       </h2>
       <p class="mt-2 px-2 max-w-2xl mx-auto text-sm leading-7 text-gray-400">
         Ops, parece que não encontramos nada aqui :(

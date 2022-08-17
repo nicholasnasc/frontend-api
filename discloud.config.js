@@ -57,17 +57,17 @@ export default {
     // Adicione logos estáticas no máximo 3/4
     enabled: true,
     meta: [
-      { name: 'Java', src: '/images/java.png', url: 'https://sendpost.io' },
-      { name: 'Ruby', src: '/images/ruby.png', url: 'https://amazon.in' },
-      { name: 'Rust', src: '/images/rust.png', url: 'https://get.interviewready.io' },
-      { name: 'PHP', src: '/images/php.png', url: 'https://crio.do' },
+      { name: 'Java', src: '/images/java.png', url: 'https://docs.oracle.com/en/java/' },
+      { name: 'Ruby', src: '/images/ruby.png', url: 'https://ruby-doc.org/' },
+      { name: 'Rust', src: '/images/rust.png', url: 'https://www.rust-lang.org/learn' },
+      { name: 'PHP', src: '/images/php.png', url: 'https://www.php.net/docs.php' },
     ]
   },
   recommendations: {
-    enabled: true,
+    enabled: false,
     meta: [
-      { name: 'Varun Jain', designation: 'Founder, SendX & SendPost', image: '/images/varun.jpeg', linkedin: 'https://www.linkedin.com/in/varun-jain-582b0215/', content: 'Gyan interned with SendX and SendPost for around 6 months. He is a very strong full-stack engineer who can create pixel perfect frontend while being able to work on backend pieces sending millions of emails per day. He is a quick learner, a great team player and, has a very strong work ethic. You can rely on him that things will be done with utmost quality. He also has pretty good product instincts and can think from the user\'s perspective.' },
-      { name: 'Gaurav Sen', designation: 'Founder, InterviewReady', image: '/images/gaurav.jpeg', linkedin: 'https://www.linkedin.com/in/gkcs/', content: 'Karn is an extraordinarily talented, diligent and foresighted individual. He is gifted at building products from paper to code, and has a knack of finding efficient solutions to complex problems. In my experience, I have rarely seen such a mixture of talent and passion put together. At InterviewReady, Karn exceeded our expectations. If you are considering working with him: congratulations, you are going to have a great time!' },
+      { name: 'Nome1', designation: 'Cargo', image: 'link da imagem de perfil', linkedin: 'link da mensagem', content: 'mensagem' },
+      { name: 'Nome2', designation: 'Cargo', image: 'link da imagem de perfil', linkedin: 'link da mensagem', content: 'mensagem' },
     ]
   },
   loadingIndicator: {
@@ -90,10 +90,10 @@ export default {
   },
   strings: {
     pt_BR: {
-      download: 'download',
+      download: 'Baixar',
       nav: {
         home: 'Início',
-        blog: 'Blog',
+        blog: 'Notícias',
         projects: 'Projetos',
         system: 'Sistema',
         about: 'Sobre Nós',
@@ -105,7 +105,7 @@ export default {
         about: 'Sobre Nós',
         content: 'Conteúdos',
         friendlyNeighborhood: 'DISCLOUD ─ API',
-        description: 'Um serviço feito para hospedar todos os seus aplicativos com certificados TLS gratuitos, CDN global, proteção contra DDoS e implantações automáticas com Git.',
+        description: 'Um serviço feito para gerenciar suas aplicações de um jeito fácil, prático e veloz. Gerencie tudo de um só lugar da forma que preferir! Com a nossa API, você poderá automatizar e interagir com as principais funcionalidades que temos a oferecer!',
         words: ['Commit Archives', 'Status', 'Restart', 'TOR Checker', 'Domain Checker', 'Whois Checker', 'Email Validator'],
       },
       api: {
@@ -113,25 +113,28 @@ export default {
         subtext: 'Lista de APIs disponíveis'
       },
       blog: {
-        header: 'blog',
-        subtext: 'i try to write once in a while. let me know your thoughts in comments or mail@karngyan.com'
+        header: 'Notícias',
+        subtext: 'Fique por dentro de todas as atualizações da nossa API.'
       },
       recentBlog: {
-        header: 'recent blogs',
-        subtext: 'it takes a lot of time to write man'
+        header: 'Notícias',
+        subtext: 'Automatize seus serviços com a nossa API'
       },
       uses: {
-        header: 'uses',
-        subtext: 'a quick summary of what I use on a daily basis to code and some codestats.net flex'
+        header: '',
+        subtext: ''
       },
       projects: {
         header: 'DisCloud - API',
         subtext: 'Gerencie Dados, Processos, Sistemas e integre com todas as suas Aplicações.'
       },
       recommendations: {
-        header: 'recommendations',
-        subtext: 'what do my mentors say'
+        header: 'FeedBack',
+        subtext: 'pessoas que utilizam nossos serviços'
       }
-    }
+    },
+  en_US: {
+  download: 'Download'
+}
   }
 }

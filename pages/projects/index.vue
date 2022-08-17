@@ -25,7 +25,7 @@
 </template>
 
 <script>
-const ALL = 'all'
+const ALL = 'Todos'
 
 export default {
   head() {
