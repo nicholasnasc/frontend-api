@@ -1,9 +1,8 @@
 <template>
   <div>
     <HeroSection/>
-    <GithubCalendar v-if="$config.social.github"/>
+    <LazyRecentBlog v-if="$config.api.enabled && posts" :posts="posts"/>
     <Recommendations v-if="$config.recommendations.enabled"/>
-    <LazyRecentBlog v-if="$config.blog.enabled && posts" :posts="posts"/>
   </div>
 </template>
 
@@ -16,7 +15,7 @@ export default {
   },
   data() {
     return {
-      posts: null
+      posts: null,
     }
   },
   async created() {
@@ -37,6 +36,7 @@ export default {
     }
   },
 }
+
 </script>
 
 <style>

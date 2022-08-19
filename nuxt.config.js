@@ -5,9 +5,9 @@ const createSitemapRoutes = async () => {
   const { $content } = require('@nuxt/content')
   const articles = await $content('posts').fetch();
 
-  if (config.blog.enabled) {
+  if (config.api.enabled) {
     for (const article of articles) {
-      routes.push(`blog/${article.slug}`);
+      routes.push(`api/${article.slug}`);
     }
   }
 
@@ -21,7 +21,7 @@ const createSitemapRoutes = async () => {
 }
 
 const constructFeedItem = (post, hostname) => {
-  const url = `${hostname}/blog/${post.slug}`;
+  const url = `${hostname}/api/${post.slug}`;
   return {
     title: post.title,
     id: url,
@@ -34,7 +34,7 @@ const constructFeedItem = (post, hostname) => {
 const create = async (feed) => {
   const hostname = `https://${config.domain}`;
   feed.options = {
-    title: `Blog | ${config.name}`,
+    title: `API | ${config.name}`,
     description: config.strings.pt_BR.hero.description,
     link: `${hostname}/feed.xml`
   }
@@ -61,7 +61,7 @@ const nuxtConfig = {
   head: {
     title: `Início | ${config.name}`,
     htmlAttrs: {
-      lang: 'en'
+      lang: 'pt'
     },
     meta: [
       { charset: 'utf-8' },
@@ -107,7 +107,7 @@ const nuxtConfig = {
     '@/components',
     '@/components/home',
     '@/components/logos',
-    '@/components/blog',
+    '@/components/api',
     '@/components/projects',
   ],
 
@@ -160,7 +160,7 @@ const nuxtConfig = {
     lazy: true,
     langDir: 'lang/',
     locales: [
-      {code: 'pt', name: 'Portugues', file: 'pt_BR.js'}
+      {code: 'pt', name: 'Portuguese', file: 'pt_BR.js'}
     ],
     defaultLocale: 'pt',
     vueI18n: {
@@ -264,18 +264,18 @@ if (config.plausibleAnalytics.enabled) {
   nuxtConfig.router.middleware.push('analytics')
 }
 
-if (config.blog.enabled) {
-  // if blog enabled only then create feed
+if (config.api.enabled) {
   nuxtConfig.modules.unshift('@nuxtjs/feed')
   nuxtConfig.feed = [
     {
-      path: '/feed.xml', // O caminho para o seu feed.
-      create, // A função de criação (veja abaixo)
-      cacheTime: 1000 * 60 * 15, // Por quanto tempo o feed deve ser armazenado em cache
-      type: 'rss2', // Pode ser: rss2, atom1, json1
-      data: [] // Será passado como 2º argumento para a função `create`
+      path: '/feed.xml', // The route to your feed.
+      create, // The create function (see below)
+      cacheTime: 1000 * 60 * 15, // How long should the feed be cached
+      type: 'rss2', // Can be: rss2, atom1, json1
+      data: [] // Will be passed as 2nd argument to `create` function
     }
   ]
+
 
 }
 

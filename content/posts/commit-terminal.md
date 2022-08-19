@@ -4,14 +4,13 @@ title: DisCloud Bash 💻
 createdAt: "2022-01-01 16:30:00"
 # image: https://media.discordapp.net/attachments/595757455238234133/926874609045876756/script.gif?width=1089&height=676
 tags:
-  - commit
-  - discloud
-  - terminal
+  - Commit
+  - Terminal
 category: Desenvolvedor
 author:
   name: PR
   twitter: discloudbot
-  image: /images/blog/pr.jpg
+  image: /images/post/pr.png
 ---
 
 <center>Interface básica de linha de comando para Windows. Podendo assim utilizar o terminal do <br> Visual Studio Code para atualizar o seu bot na Discloud.</center>

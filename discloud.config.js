@@ -1,20 +1,17 @@
-// Carregar arquivos em static/ Portanto, qualquer arquivo static/file.pdf -> /file.pdf é acessível na raiz
-
 export default {
-  name: 'DisCloud API Status',
-  domain: 'nick.discloud.app', // Não colocar: https://
-  image: '/images/discloud-logo.png',
+  name: 'DisCloud.app',
+  domain: 'api.discloud.app',
+  image: '/images/discloud-hero.png',
   email: 'support@discloudbot.com',
   googleAnalyticsV4: {
     enabled: false,
     id: ''
   },
   plausibleAnalytics: {
-    enabled: true,
+    enabled: false,
     domain: 'nick.discloud.app',
     trackLocalhost: false,
-    // leave it empty if plausible is not self hosted
-    apiHost: '' // default: https://plausible.io
+    apiHost: ''
   },
   // Habilite se quiser comentários e curtidas nas postagens
   firebase: {
@@ -22,56 +19,50 @@ export default {
   },
   social: {
     github: 'discloud',
-    linkedin: 'discloud',
+    linkedin: 'pedroricardor',
     facebook: 'discloudbot',
     twitter: 'discloudbot',
     instagram: 'discloudbot',
-    codestats: '' // https://codestats.net
+    codestats: ''
   },
   buyMeACoffee: {
-    enabled: true,
-    url: 'https://discloud.app'
+    enabled: false,
+    url: ''
   },
   projects: {
-    enabled: true,
+    enabled: false,
   },
-  blog: {
+  api: {
     enabled: true,
   },
   resume: {
     enabled: false,
-    pdfUrl: '/' // Adicione o sobre nós na raíz da pasta static
+    pdfUrl: ''
   },
   uses: {
     enabled: false,
     meta: [
-      {title: 'Sistema Operacional', value: 'Linux Unbuntu'},
-      {title: 'RAM', value: '128 GB 3600 MHz DDR4'},
-      {title: 'Processador', value: 'Ryzen 7 3700x 8/16'},
-      {title: 'Armazenamento', value: 'SSD Nvme. 2TB'},
-      {title: 'Linguagem', value: 'JavaScript, TypeScript'},
-      {title: 'Hospedagem', value: 'Sites, Bots & Banco de Dados'}
+      {title: '', value: ''},
     ]
   },
   workedAt: {
-    // Adicione logos estáticas no máximo 3/4
     enabled: true,
     meta: [
-      { name: 'Java', src: '/images/java.png', url: 'https://docs.oracle.com/en/java/' },
-      { name: 'Ruby', src: '/images/ruby.png', url: 'https://ruby-doc.org/' },
-      { name: 'Rust', src: '/images/rust.png', url: 'https://www.rust-lang.org/learn' },
-      { name: 'PHP', src: '/images/php.png', url: 'https://www.php.net/docs.php' },
+      { name: 'Ruby', src: '/images/lang/ruby.png', url: 'api/languages' },
+      { name: 'Java', src: '/images/lang/java.png', url: 'api/languages' },
+      { name: 'PHP', src: '/images/lang/php.png', url: 'api/languages' },
+      { name: 'Rust', src: '/images/lang/rust.png', url: 'api/languages' },
     ]
   },
   recommendations: {
     enabled: false,
     meta: [
-      { name: 'Nome1', designation: 'Cargo', image: 'link da imagem de perfil', linkedin: 'link da mensagem', content: 'mensagem' },
-      { name: 'Nome2', designation: 'Cargo', image: 'link da imagem de perfil', linkedin: 'link da mensagem', content: 'mensagem' },
+      { name: '', designation: '', image: '', linkedin: '', content: ''},
+      { name: '', designation: '', image: '', linkedin: '', content: '' },
     ]
   },
   loadingIndicator: {
-    name: 'cube-grid'
+    name: 'pulse'
     // https://tobiasahlin.com/spinkit/
     // circle
     // cube-grid
@@ -93,48 +84,24 @@ export default {
       download: 'Baixar',
       nav: {
         home: 'Início',
-        blog: 'Notícias',
-        projects: 'Projetos',
-        system: 'Sistema',
-        about: 'Sobre Nós',
-        buyMeACoffee: 'Seja Doador',
-        signIn: 'Login',
-        signOut: 'Sair'
+        api: 'API',
+        dashboard: 'Dashboard',
       },
       hero: {
         about: 'Sobre Nós',
-        content: 'Conteúdos',
-        friendlyNeighborhood: 'DISCLOUD ─ API',
-        description: 'Um serviço feito para gerenciar suas aplicações de um jeito fácil, prático e veloz. Gerencie tudo de um só lugar da forma que preferir! Com a nossa API, você poderá automatizar e interagir com as principais funcionalidades que temos a oferecer!',
-        words: ['Commit Archives', 'Status', 'Restart', 'TOR Checker', 'Domain Checker', 'Whois Checker', 'Email Validator'],
+        content: 'Projetos',
+        text: 'DISCLOUD ─ API',
+        description: 'Gerencie seus serviços de um jeito fácil, prático e veloz, com a nossa API você poderá automatizar e interagir com as principais funcionalidades que temos a oferecer, com a API da DisCloud você tem suporte para as melhores rotas de desenvolvimento que a sua aplicação precisa!',
+        words: ['Commit', 'Start', 'Stop', 'Restart', 'Upconfig', 'Logs', 'Status', 'Apt', 'AutoRestart', 'Backup', 'RamEdit', 'Mod', 'RemoverApp', 'Version', 'UserInfo', 'SubDominio', 'CustomDomain', 'Git'],
       },
-      api: {
-        header: 'API Requests',
-        subtext: 'Lista de APIs disponíveis'
+      project: {
+        header: 'DisCloud › API',
+        subtext: 'Com a nossa API, você poderá automatizar e interagir com as principais funcionalidades que temos a oferecer!'
       },
-      blog: {
-        header: 'Notícias',
-        subtext: 'Fique por dentro de todas as atualizações da nossa API.'
+      recentProject: {
+        header: 'API',
+        subtext: 'Crie, remova, consulte, ative e desative suas aplicações com total segurança.'
       },
-      recentBlog: {
-        header: 'Notícias',
-        subtext: 'Automatize seus serviços com a nossa API'
-      },
-      uses: {
-        header: '',
-        subtext: ''
-      },
-      projects: {
-        header: 'DisCloud - API',
-        subtext: 'Gerencie Dados, Processos, Sistemas e integre com todas as suas Aplicações.'
-      },
-      recommendations: {
-        header: 'FeedBack',
-        subtext: 'pessoas que utilizam nossos serviços'
-      }
-    },
-  en_US: {
-  download: 'Download'
-}
+    }
   }
 }

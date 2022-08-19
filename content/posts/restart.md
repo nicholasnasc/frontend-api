@@ -1,13 +1,21 @@
 ---
-id: 1
-title: Restart
-description: Com ela vocês poderão reiniciar suas aplicações de qualquer lugar sem ter que digitar comandos em nosso servidor discord.
-tech: Updates Javascript Python
-logo: https://cdn-icons.flaticon.com/png/512/5249/premium/5249378.png?token=exp=1660766434~hmac=c96ba649a4857ccae79f827dd1e7f97a
-website: https://discord.com/channels/584490943034425391/595757455238234133/921143985924358144
-github: https://github.com/DisCloud/
-twitter: discloudbot
+id: 3
+title: RESTART 🔄
+createdAt: "2022-19-08"
+tags:
+  - Api
+  - JavaScript
+  - Python
+category: API
+author:
+  name: Serginho
+  twitter: discloudbot
+  image: /images/post/sergio.png
 ---
+
+Com ela vocês poderão reiniciar as aplicações em qualquer lugar sem precisar se direcionar ao nosso servidor para executar a ação. 
+
+<!--more-->
 
 # API ─ Restart 🔄
 

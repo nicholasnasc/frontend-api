@@ -9,11 +9,7 @@
         <div class="hidden lg:block lg:ml-6">
           <div class="flex space-x-4">
             <nuxt-link exact :to="localePath('/')" class="active text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-bold">{{ $t('nav.home')}}</nuxt-link>
-            <nuxt-link v-show="$config.blog.enabled" :to="localePath('/blog')" class="active text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-bold">{{ $t('nav.blog')}}</nuxt-link>
-            <nuxt-link v-show="$config.projects.enabled" :to="localePath('/projects')" class="active text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-bold">{{ $t('nav.projects')}}</nuxt-link>
-            <nuxt-link v-show="$config.uses.enabled" :to="localePath('/uses')" class="active text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-bold">{{ $t('nav.uses')}}</nuxt-link>
-            <nuxt-link v-show="$config.resume.enabled" :to="localePath('/resume')" class="active text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-bold">{{ $t('nav.resume')}}</nuxt-link>
-            <a v-show="$config.buyMeACoffee.enabled" :href="$config.buyMeACoffee.url" target="_blank" rel="noreferrer" class="active text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-bold">{{ $t('nav.buyMeACoffee')}}</a>
+            <nuxt-link v-show="$config.api.enabled" :to="localePath('/api')" class="active text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-bold">{{ $t('nav.api')}}</nuxt-link>
           </div>
         </div>
       </div>
@@ -34,6 +30,7 @@
           <div v-if="!user" @click="signInUser" class="active cursor-pointer text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-bold">{{ $t('nav.signIn')}}</div>
           <div v-else @click="signOutUser" class="active cursor-pointer text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-bold">{{ $t('nav.signOut')}}</div>
         </div>
+          <a v-if="$config.api.enabled" class="active text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm" href="https://discloud.app/" target="_blank">{{ $t('nav.dashboard')}}</a>
       </div>
     </div>
   </div>
@@ -66,7 +63,7 @@
           </div>
           <div @click="mobileMenuOpen = false" class="flex flex-col space-y-1 px-2 pt-2 pb-3">
             <nuxt-link exact :to="localePath('/')" class="flex px-3 py-2 rounded-md text-base font-medium text-gray-200 hover:text-gray-100 hover:bg-gray-600 focus:outline-none focus:text-gray-100 focus:bg-gray-500 transition duration-150 ease-in-out" role="menuitem">{{ $t('nav.home')}}</nuxt-link>
-            <nuxt-link v-show="$config.blog.enabled" :to="localePath('/blog')" class="flex px-3 py-2 rounded-md text-base font-medium text-gray-200 hover:text-gray-100 hover:bg-gray-600 focus:outline-none focus:text-gray-100 focus:bg-gray-500 transition duration-150 ease-in-out" role="menuitem">{{ $t('nav.blog')}}</nuxt-link>
+            <nuxt-link v-show="$config.api.enabled" :to="localePath('/api')" class="flex px-3 py-2 rounded-md text-base font-medium text-gray-200 hover:text-gray-100 hover:bg-gray-600 focus:outline-none focus:text-gray-100 focus:bg-gray-500 transition duration-150 ease-in-out" role="menuitem">{{ $t('nav.api')}}</nuxt-link>
             <nuxt-link v-show="$config.projects.enabled" :to="localePath('/projects')" class="flex px-3 py-2 rounded-md text-base font-medium text-gray-200 hover:text-gray-100 hover:bg-gray-600 focus:outline-none focus:text-gray-100 focus:bg-gray-500 transition duration-150 ease-in-out" role="menuitem">{{ $t('nav.projects')}}</nuxt-link>
             <nuxt-link v-show="$config.uses.enabled" :to="localePath('/uses')" class="flex px-3 py-2 rounded-md text-base font-medium text-gray-200 hover:text-gray-100 hover:bg-gray-600 focus:outline-none focus:text-gray-100 focus:bg-gray-500 transition duration-150 ease-in-out" role="menuitem">{{ $t('nav.uses')}}</nuxt-link>
             <nuxt-link v-show="$config.resume.enabled" :to="localePath('/resume')" class="flex px-3 py-2 rounded-md text-base font-medium text-gray-200 hover:text-gray-100 hover:bg-gray-600 focus:outline-none focus:text-gray-100 focus:bg-gray-500 transition duration-150 ease-in-out" role="menuitem">{{ $t('nav.resume')}}</nuxt-link>
@@ -114,7 +111,7 @@ export default {
     },
     signOutUser() {
       this.mobileMenuOpen = false
-      this.$store.dispatch('Sair')
+      this.$store.dispatch('signOut')
       this.$toast.show('Nos vemos na próxima 👋', this.toastOptions)
     }
   },
