@@ -1,7 +1,7 @@
 <template>
   <div>
     <HeroSection/>
-    <LazyRecentBlog v-if="$config.api.enabled && posts" :posts="posts"/>
+    <LazyRecentApi v-if="$config.api.enabled && posts" :posts="posts"/>
     <Recommendations v-if="$config.recommendations.enabled"/>
   </div>
 </template>

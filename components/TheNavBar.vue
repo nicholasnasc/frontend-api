@@ -30,6 +30,7 @@
           <div v-if="!user" @click="signInUser" class="active cursor-pointer text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-bold">{{ $t('nav.signIn')}}</div>
           <div v-else @click="signOutUser" class="active cursor-pointer text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-bold">{{ $t('nav.signOut')}}</div>
         </div>
+        <a v-if="$config.api.enabled" class="active text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm" href="https://discord.gg/CvxevT5" target="_blank">{{ $t('nav.server')}}</a>
           <a v-if="$config.api.enabled" class="active text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm" href="https://discloud.app/" target="_blank">{{ $t('nav.dashboard')}}</a>
       </div>
     </div>

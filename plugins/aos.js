@@ -4,24 +4,24 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 
 Vue.use(AOS.init({
-    // Global settings:
-    disable: false, // accepts following values: 'phone', 'tablet', 'mobile', boolean, expression or function
-    startEvent: 'DOMContentLoaded', // name of the event dispatched on the document, that AOS should initialize on
-    initClassName: 'aos-init', // class applied after initialization
-    animatedClassName: 'aos-animate', // class applied on animation
-    useClassNames: false, // if true, will add content of `data-aos` as classes on scroll
-    disableMutationObserver: false, // disables automatic mutations' detections (advanced)
-    debounceDelay: 50, // the delay on debounce used while resizing window (advanced)
-    throttleDelay: 99, // the delay on throttle used while scrolling the page (advanced)
+    // Configurações globais:
+    disable: false, // aceita os seguintes valores: 'phone', 'tablet', 'mobile', boolean, expression ou function
+    startEvent: 'DOMContentLoaded', // nome do evento despachado no documento, que o AOS deve inicializar
+    initClassName: 'aos-init', // classe aplicada após a inicialização
+    animatedClassName: 'aos-animate', // aula aplicada em animação
+    useClassNames: false, // se true, adicionará conteúdo de `data-aos` como classes na rolagem
+    disableMutationObserver: false, // desativa as detecções de mutações automáticas (avançado)
+    debounceDelay: 50, // o atraso no debounce usado ao redimensionar a janela (avançado)
+    throttleDelay: 99, // o atraso no acelerador usado ao rolar a página (avançado)
 
 
-    // Settings that can be overridden on per-element basis, by `data-aos-*` attributes:
-    offset: 120, // offset (in px) from the original trigger point
-    delay: 0, // values from 0 to 3000, with step 50ms
-    duration: 400, // values from 0 to 3000, with step 50ms
-    easing: 'ease', // default easing for AOS animations
-    once: false, // whether animation should happen only once - while scrolling down
-    mirror: false, // whether elements should animate out while scrolling past them
-    anchorPlacement: 'top-bottom', // defines which position of the element regarding to window should trigger the animation
+    // Configurações que podem ser substituídas por elemento, por atributos `data-aos-*`:
+    offset: 120, // deslocamento (em px) do ponto de disparo original
+    delay: 0, // valores de 0 a 3000, com passo de 50ms
+    duration: 400, // valores de 0 a 3000, com passo de 50ms
+    easing: 'ease', // easing padrão para animações AOS
+    once: false, // se a animação deve acontecer apenas uma vez - enquanto rola para baixo
+    mirror: false, // se os elementos devem animar enquanto passam por eles
+    anchorPlacement: 'top-bottom', // define qual posição do elemento em relação à janela deve acionar a animação
 
   }));

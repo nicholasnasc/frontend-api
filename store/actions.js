@@ -1,7 +1,7 @@
 import {query} from "vue-gtag";
 
 export default {
-  // nuxt handles invoking this when firebaseAuthStateChanges
+  // nuxt lida com a invocação disso quando firebaseAuthStateChanges
   async authAction({dispatch, state, commit}, {authUser}) {
     console.debug('in auth action')
     if (!authUser) {

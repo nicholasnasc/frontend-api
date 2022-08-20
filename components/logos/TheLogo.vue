@@ -1,6 +1,6 @@
 <template>
 <div class="font-extrabold hover:text-hot-pink text-3xl animation-logo tracking-tighter text-indigo-700">
-  <img src="images/logodiscloud.png" width="170"/>
+  <img src="images/logodiscloud2.png" width="170"/>
 </div>
 </template>
 

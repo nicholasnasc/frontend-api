@@ -86,6 +86,7 @@ export default {
         home: 'Início',
         api: 'API',
         dashboard: 'Dashboard',
+        server: 'Servidor', 
       },
       hero: {
         about: 'Sobre Nós',
@@ -94,11 +95,11 @@ export default {
         description: 'Gerencie seus serviços de um jeito fácil, prático e veloz, com a nossa API você poderá automatizar e interagir com as principais funcionalidades que temos a oferecer, com a API da DisCloud você tem suporte para as melhores rotas de desenvolvimento que a sua aplicação precisa!',
         words: ['Commit', 'Start', 'Stop', 'Restart', 'Upconfig', 'Logs', 'Status', 'Apt', 'AutoRestart', 'Backup', 'RamEdit', 'Mod', 'RemoverApp', 'Version', 'UserInfo', 'SubDominio', 'CustomDomain', 'Git'],
       },
-      project: {
+      api: {
         header: 'DisCloud › API',
         subtext: 'Com a nossa API, você poderá automatizar e interagir com as principais funcionalidades que temos a oferecer!'
       },
-      recentProject: {
+      recentapi: {
         header: 'API',
         subtext: 'Crie, remova, consulte, ative e desative suas aplicações com total segurança.'
       },

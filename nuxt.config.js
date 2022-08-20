@@ -36,7 +36,7 @@ const create = async (feed) => {
   feed.options = {
     title: `API | ${config.name}`,
     description: config.strings.pt_BR.hero.description,
-    link: `${hostname}/feed.xml`
+    link: `${hostname}/ds`
   }
   const { $content } = require('@nuxt/content')
   const posts = await $content('posts').fetch();
@@ -268,7 +268,7 @@ if (config.api.enabled) {
   nuxtConfig.modules.unshift('@nuxtjs/feed')
   nuxtConfig.feed = [
     {
-      path: '/feed.xml', // The route to your feed.
+      path: '/ds', // The route to your feed.
       create, // The create function (see below)
       cacheTime: 1000 * 60 * 15, // How long should the feed be cached
       type: 'rss2', // Can be: rss2, atom1, json1
